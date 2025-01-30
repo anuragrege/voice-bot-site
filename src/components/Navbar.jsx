@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Transcripts from "../pages/Transcripts";
 
 // Register the plugin with GSAP
 gsap.registerPlugin(ScrollToPlugin);
