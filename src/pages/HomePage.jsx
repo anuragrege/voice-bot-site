@@ -92,7 +92,7 @@ const HomePage = () => {
               Explore. Enquire.
             </div>
             <div className="driveText" style={styles.subText}>
-              Drive.
+              Roxie.
             </div>
           </div>
         </div>
