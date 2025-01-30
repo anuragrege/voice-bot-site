@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 // Register the plugin with GSAP
 gsap.registerPlugin(ScrollToPlugin);
 
 const Navbar = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
-
   useEffect(() => {
     gsap.fromTo(
       ".navbar",
@@ -34,13 +32,8 @@ const Navbar = () => {
       ease: "power2.out",
     });
   };
-
   const redirectToDashboard = () => {
     window.location.href = "http://roxiedash1.netlify.app/";
-  };
-
-  const navigateToTranscript = () => {
-    navigate("/transcripts"); // Use navigate hook to go to /transcripts
   };
 
   return (
@@ -75,12 +68,9 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button
-              onClick={navigateToTranscript} // Using button for navigation
-              className="transcript-button"
-            >
+            <Link to="/transcripts" target="_blank" rel="noopener noreferrer">
               Transcript
-            </button>
+            </Link>
           </li>
           <li>
             <a
